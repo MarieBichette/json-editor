@@ -1,28 +1,23 @@
 {
-  "title": "Data",
-  "type": "object",
   "id": "complete-schema",
+  "type": "object",
   "properties": {
     "time-management": {
       "type": "string",
       "description": "Données relatives au pas de temps"
     },
     "geometry": {
-      "type": "string",
-      "description": "Données relatives à la géométrie de la simulation"
+      "$ref": "geometry.json"
     },
     "matter": {
       "type": "string",
       "description": "Données relatives aux matériaux"
     },
     "boundary-conditions": {
-      "type": "string",
-      "description": "Définitions des conditions limites"
+      "$ref": "boundary-condition.json" 
     },
     "numeric-parameters": {
-      "$ref": "./json-editor_docs/xvof_types/numeric-parameters.json",
-      "title": "numeric-parameters",
-      "description": "Données relatives aux paramètres de la simulation numérique"
+      "$ref": "numeric-parameters.json" 
     },
     "output": {
       "type": "string",

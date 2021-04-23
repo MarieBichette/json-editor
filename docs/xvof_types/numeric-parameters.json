@@ -1,22 +1,20 @@
 {
-  "title": "numeric-parameters",
   "type": "object",
-  "id": "numeric-parameters",
   "properties": {
     "linear-pseudo": {
-      "type": "float",
+      "type": "number",
       "description": "Paramètre pour la pseudo-viscosité linéaire"
     },
     "quadratic-pseudo": {
-      "type": "float",
+      "type": "number",
       "description": "Paramètre pour la pseudo-viscosité quadratique"
     },
     "cfl": {
-      "type": "float",
+      "type": "number",
       "description": "Condition CFL"
     },
     "cfl-pseudo": {
-      "type": "float",
+      "type": "number",
       "description": "Condition CFL liée à la pseudo-viscosité"
     }
   }

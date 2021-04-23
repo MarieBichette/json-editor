@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "left-boundary": {
+      "type": "object",
+      "description": "Condition limite sur le bord gauche",
+      "properties": {
+        "bc-type": {
+          "type": "string",
+          "enum": ["pressure", "velocity"]
+        },
+        "bc-law": {
+          "type": "string",
+          "enum": ["constant", "ramp"]
+        }
+      },
+      "oneOf": [
+      "if": {
+        "properties": { "bc-law": { "const": "constant" } }
+      },
+      "then": {
+        "properties": { 
+          "value": {
+            "type": "number"
+          }
+        }  
+      },
+      "if": {
+        "properties": { "bc-law": { "const": "ramp" } }
+      },
+      "then": {
+        "properties": { 
+          "value2": {
+            "type": "number"
+          }
+        }
+      }
+      ]      
+    }
+  }
+}
